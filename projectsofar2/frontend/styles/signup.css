@@ -1,0 +1,169 @@
+/*ProjectSoFar-2*/
+/*Styling for SignUp page*/
+
+/*Main body element*/
+body {
+    background: rgb(254,247,224);
+    background: linear-gradient(0deg, rgba(254,247,224,1) 0%, rgba(253,233,164,1) 100%);
+    
+
+    width: 99vw;
+    height: 99vh;
+    margin: 0px;
+
+    font-family: sans-serif;
+    color: rgba(74, 96, 107);
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+/**************/
+/*Form element*/
+/**************/
+/*Contains - Heading, Profile, Register, Button elements*/
+#frm {
+    /*border:1px solid red;*/
+    
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, .7);
+
+    width: 425px;
+    height: 625x;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    flex-wrap: nowrap;
+}
+
+/*****************/
+/*Heading element*/
+/*****************/
+#heading {
+    /*border:1px solid blue;*/
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+    background-color: rgba(74, 96, 107, .40);
+    margin: 0px;
+}
+
+#heading>h3 {
+    /*border:1px solid red;*/
+    padding: 20px;
+    margin: 10px auto;
+
+    font-size: 2rem;
+    font-stretch: extra-expanded;
+    text-align: center;
+}
+
+/*****************/
+/*Profile element*/
+/*****************/
+#profile {
+    /*border:1px solid violet;*/
+    padding: 5px 30px;
+    margin: 0px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#profile td {
+    /*border:1px solid red;*/
+    width: 800px;
+}
+
+/******************/
+/*Register Element*/
+/******************/
+#register {
+    /*border:1px solid violet;*/
+    padding: 5px 30px;
+    margin: 0px;
+}
+
+/* Input Box element's styling*/
+/*****************************/
+.inptbx {
+    border: 1px solid antiquewhite;
+    border-radius: 3px;
+    width: 100%;
+
+    box-sizing: border-box;
+    padding: 8px;
+}
+
+input:focus {
+    outline: 0;
+}
+
+/****************/
+/*Button Element*/
+/****************/
+#bttns {
+    /*border:1px solid rgb(151, 4, 151);*/
+    padding: 20px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+#bttns>button {
+    border-radius: 7px;
+    background-color: rgba(74, 96, 107, .30);
+
+    width: 110px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: rgb(44, 58, 65);
+
+    cursor: pointer;
+
+}
+
+/**************************/
+/**************************/
+    /*VALIDATION styling*/
+/**************************/
+/**************************/
+
+.inptbx.success {
+    border-color: green;
+}
+
+.inptrd.success {
+    border-color: green;
+}
+
+.inptbx.error {
+    border-color: red;
+}
+
+.inptrd.error {
+    border-color: red;
+}
+
+.valmsg {
+    visibility: hidden;
+    font-size: .75rem;
+    text-align: right;
+}
+
+.valmsg.error {
+    visibility: visible;
+    color: red;
+}
+
+.valmsg.success {
+    visibility: hidden;
+}

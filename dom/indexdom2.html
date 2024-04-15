@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM2</title>
+</head>
+<body>
+    <form id="LoginForm">
+        <p id="para1">The best paragraph</p>
+        <div>The best paragraph</div>
+        <input type="string" name="fullname" value="" placeholder="Enter Name">
+        <input type="string" name="username" value="" placeholder="Enter Username">
+        <input type="submit" value ="submit">
+        <ul id ="class1">
+            <li>one</li>
+            <li>teo</li>
+            <li>tree</li>
+        </ul>
+        <ol id ="class1">
+            <li>First</li>
+            <li>Second</li>
+            <li>Third</li>
+        </ol>
+    </form>
+    <button onclick="getdata()">DOM</button>
+    <script>
+        function getdata() {
+            console.log("Custom console Data");
+            //form has multiple elements into it, hence its an array and .elements work
+            console.log(document.getElementById("LoginForm").elements);
+            console.log(document.getElementById("LoginForm").elements.length);
+            //the para element doesnt have elements inside, hence .elements wont work
+            document.getElementById("para1").innerHTML = "Hello World";
+
+            let newelem = document.createElement("p");
+            newelem.innerText = "Hey how are you";
+            document.body.appendChild(newelem);
+            console.log(document.getElementsByTagName("ul")[0]);
+            console.log(document.getElementsByClassName("class1"));
+        };
+    </script>
+</body>
+</html>

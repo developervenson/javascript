@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/signin.css" type="text/css">
+    <script src="scripts/signin.js" defer></script>
+    <title>ProjectSoFar-2 : SignIn</title>
+</head>
+<body>
+    <div id="logo">
+        <img src="images/logo.jpg" title="Logo Image" alt="Logo Image">
+    </div>
+    <div id="frm">
+        <div id="heading">
+            <h3> Sign In</h3>
+        </div>
+        <div id="login">
+            <div>
+                <label for="email">Email</label>
+                <input id="email" class="inptbx" name="email" type="email" placeholder="Enter eMail Address">
+                <div class="valmsg">validation message</div>
+            </div>
+            <div>
+                <label for="psword">Password</label>
+                <input id="psword" class="inptbx" name="psword" type="password" placeholder="Enter Password">
+                <div class="valmsg">validation message</div>
+            </div>
+            <div id="bttns">
+                <button onclick="reset()">Clear</button>
+                <button onclick="signin()">Sign In</button>
+            </div>
+        </div>
+        <div id="signup">
+            <a href="signup.html">Sign Up</a>
+        </div>
+    </div>
+</body>
+</html>

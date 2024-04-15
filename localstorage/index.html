@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="email">email</label>
+    <input id="email" name="email" type="email">
+    <label for="password">password</label>
+    <input id="password" name="password" type="password">
+    <button onclick="signin()">Signin</button>
+
+<script>
+    function signin() {
+        let email = document.getElementById("email").value;
+        console.log (email);
+        let password = document.getElementById("password").value;
+        console.log (password);
+        
+
+        fetch("http://127.0.0.1:4001/signin?email=" + email + "&password=" + password)
+        .then (function (response) {
+            response.json()
+            .then( function(finalData){
+                console.log(finalData);
+                console.log(finalData.token);
+
+            localStorage.setItem("authtoken", finalData.token);
+            })
+        });
+    };
+</script>
+</body>
+</html>

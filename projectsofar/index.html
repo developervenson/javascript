@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROJECTSOFAR Application</title>
+</head>
+<body>
+    <script>
+        function login() {
+            let response = fetch("http://127.0.0.1:5001/login"{
+                method: "POST",
+                headers: {
+                    username: "Venkat",
+                    passcode: "pass12"
+                }
+            })
+            console.log(response);
+        };
+
+        function getdata() {
+            let response = fetch("http://127.0.0.1:5001/getdata")
+            console.log(response)
+        };
+
+        function postdata() {
+            let response = fetch("http://127.0.0.1:5001/postdata"{
+                method : "POST",
+                headers: {
+                    username: "Venkat",
+                    passcode: "pass12"
+                }
+            })
+            console.log(response)
+        };
+
+    </script>
+    <button onclick="LogIn()">Log In Data</button>
+    <button onclick="getdata()">Get Data</button>
+    <button onclick="postdata()">Post Data</button>
+</body>
+</html>
